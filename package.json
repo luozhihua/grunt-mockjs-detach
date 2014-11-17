@@ -1,7 +1,7 @@
 {
   "name": "grunt-mockjs-detach",
   "version": "0.1.0",
-  "main": "tasks/mockjsdetach.js",
+  "main": "tasks/mockjs_detach.js",
   "description": "Detach mockjs data on distill files with Grunt.",
 
       "homepage": "https://github.com/luozhihua/grunt-mockjs-detach",

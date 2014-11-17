@@ -60,7 +60,7 @@ module.exports = function(grunt) {
       }
     },
 
-    mockjsdetach: {
+    mockjs_detach: {
       options: {
         begin: '<!-- mockjs -->', // default to: <!-- mockjs -->
         end: '<!-- endmockjs -->' // default to: <!-- endmockjs -->
@@ -78,6 +78,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   // Default task.
-  grunt.registerTask('test', ['clean', 'jshint', 'mockjsdetach', 'mochacli']);
+  grunt.registerTask('test', ['clean', 'jshint', 'mockjs_detach', 'mochacli']);
   grunt.registerTask('default', ['test', ]);
 };

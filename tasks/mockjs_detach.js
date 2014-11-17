@@ -10,7 +10,7 @@
 
 var chalk = require('chalk');
 
-function mockjsdetach(grunt) {
+function mockjs_detach(grunt) {
 
   var detect = /<!--\s?mockjs\s?-->(\n|\r|.)*?<!--\s?endmockjs\s?-->\n+\s+/g;
 
@@ -20,8 +20,8 @@ function mockjsdetach(grunt) {
     return cont.replace(detect, '');
   }
 
-  grunt.registerMultiTask('mockjsdetach', 'Detach mockjs data on distill files.', function () {
-    this.requiresConfig(['mockjsdetach', this.target, 'src']);
+  grunt.registerMultiTask('mockjs_detach', 'Detach mockjs data on distill files.', function () {
+    this.requiresConfig(['mockjs_detach', this.target, 'src']);
     // Extend the options object with the entire data object (instead of just .src) for backward compatibility.
 
     var options = this.options(this.data);
@@ -51,4 +51,4 @@ function mockjsdetach(grunt) {
   });
 }
 
-module.exports = mockjsdetach;
+module.exports = mockjs_detach;

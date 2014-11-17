@@ -1,44 +1,92 @@
-#  [![Build Status](https://secure.travis-ci.org/luozhihua/grunt-mockjs-detach.png?branch=master)](http://travis-ci.org/luozhihua/grunt-mockjs-detach)
+# grunt-mockjs-detach
 
 > Detach mockjs data on distill files with Grunt.
 
-
 ## Getting Started
+This plugin requires Grunt.
 
-Install the module with: `npm install grunt-mockjs-detach`
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+
+```shell
+npm install grunt-mockjs-detach --save-dev
+```
+
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-var grunt-mockjs-detach = require('grunt-mockjs-detach');
-grunt-mockjs-detach.awesome(); // "awesome"
+grunt.loadNpmTasks('grunt-mockjs-detach');
 ```
 
-Install with cli command
+## The "mockjs_detach" task
 
-```sh
-$ npm install -g grunt-mockjs-detach
-$ grunt-mockjs-detach --help
-$ grunt-mockjs-detach --version
+### Overview
+In your project's Gruntfile, add a section named `mockjs_detach` to the data object passed into `grunt.initConfig()`.
+
+```js
+grunt.initConfig({
+  mockjs_detach: {
+    options: {
+      // Task-specific options go here.
+    },
+    your_target: {
+      // Target-specific file lists and/or options go here.
+    },
+  },
+})
 ```
 
+### Options
 
+#### options.separator
+Type: `String`
+Default value: `',  '`
 
+A string value that is used to do something with whatever.
 
-## Documentation
+#### options.punctuation
+Type: `String`
+Default value: `'.'`
 
-_(Coming soon)_
+A string value that is used to do something else with whatever else.
 
+### Usage Examples
 
-## Examples
+#### Default Options
+In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
-_(Coming soon)_
+```js
+grunt.initConfig({
+  mockjs_detach: {
+    options: {},
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
 
+#### Custom Options
+In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+
+```js
+grunt.initConfig({
+  mockjs_detach: {
+    options: {
+      separator: ': ',
+      punctuation: ' !!!',
+    },
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
 
 ## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com).
-
+## Release History
+_(Nothing yet)_
 
 ## License
-
-Copyright (c) 2014 luozhihua  
-Licensed under the MIT license.
+Copyright (c) 2014 Colin. Licensed under the MIT license.
