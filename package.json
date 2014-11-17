@@ -22,11 +22,11 @@
   ],
   "keywords": [
     "grunt-mockjs-detach"  ,
-        "mockjs"  ,
-        " grunt"  ,
-        " plugins"  ,
-        " detach"  ,
-        " mock"
+    " mockjs"  ,
+    " grunt"  ,
+    " plugins"  ,
+    " detach"  ,
+    " mock"
   ],
   "dependencies": {
     "chalk": "~0.4.0"
