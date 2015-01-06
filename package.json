@@ -1,6 +1,6 @@
 {
   "name": "grunt-mockjs-detach",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "tasks/mockjs_detach.js",
   "description": "Detach mockjs data on distill files with Grunt.",
 
@@ -9,8 +9,8 @@
     "bugs": "https://github.com/luozhihua/grunt-mockjs-detach/issues",
   "author": {
     "name": "luozhihua",
-    "email": "mail@luozhihua.com"  ,
-        "url": "http://blog.luozhihua.com"
+    "email": "mail@luozhihua.com",
+    "url": "http://blog.luozhihua.com"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,12 @@
     "tasks"
   ],
   "keywords": [
-    "grunt-mockjs-detach"  ,
-    " mockjs"  ,
-    " grunt"  ,
-    " plugins"  ,
-    " detach"  ,
-    " mock"
+    "grunt-mockjs-detach",
+    "mockjs",
+    "grunt",
+    "plugins",
+    "detach",
+    "mock"
   ],
   "dependencies": {
     "chalk": "~0.4.0"

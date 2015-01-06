@@ -16,13 +16,11 @@ function mockjs_detach(grunt) {
   // remove
   function detachMockBlock(file, options) {
 
-    var begin = options.begin || '<!--\\s?mockjs\\s?-->';
-    var end = options.end || '<!--\\s?endmockjs\\s?-->';
-
+    var begin  = options.begin || '<!--\\s?mockjs\\s?-->';
+    var end    = options.end || '<!--\\s?endmockjs\\s?-->';
     var detect = new RegExp(begin + '(\\n|\\r|.)*?' + end, 'g');
+    var cont   = grunt.file.read(file, {encoding: 'utf-8'});
 
-    var cont = grunt.file.read(file, {encoding: 'utf-8'});
-    console.log(options);
     return cont.replace(detect, '');
   }
 
