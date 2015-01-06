@@ -1,4 +1,4 @@
-# grunt-mockjs-detach
+# grunt-mockjs-detach [![Build Status](https://travis-ci.org/luozhihua/grunt-mockjs-detach.svg?branch=master)](http://travis-ci.org/luozhihua/grunt-mockjs-detach)
 
 > A grunt plugin use for detach mockjs data source..
 
